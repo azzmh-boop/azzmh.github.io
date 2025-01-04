@@ -1,0 +1,357 @@
+:root {
+    --primary: #5f9ff3;
+    --bg: #222831;
+}
+
+* {
+    font-family: "Nunito", sans-serif;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--bg);
+    color: #ffffff;
+     /* min-height: 2000px; */
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgb(74, 98, 138);
+    border-bottom: 1px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #F5EFE7;
+}
+
+.navbar .navbar-nav a {
+    color: #F5EFE7;
+    display: inline-block;
+    font-size: 150%;
+    margin: 0 4rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var
+    (--primary);
+    transition: 2s linear;
+}
+
+.feather {
+     width: 24px;
+     height: 24px;
+     stroke: #EEEEEE;
+     stroke-width: 2;
+     stroke-linecap: round;
+     stroke-linejoin: round;
+     fill: none;
+     margin: 0 0.5rem;
+      }
+
+.feather :hover {
+    color: var(--primary);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("img/class.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgb(34, 40, 49));
+}
+
+/* hero section */
+
+.hero .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1 {
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgb(34, 40, 49, 0.5);
+    line-height: 1.2;
+}
+
+.hero .content p {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+    font-weight: 20;
+    text-shadow: 1px 1px 3px rgb(34, 40, 49, 0.5);
+}
+
+.hero .content .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: #EEEEEE;
+    background-color: var(--primary);
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px rgb(34, 40, 49, 0.5);
+}
+/* content index(2).html */
+.content-story {
+    padding: 10rem 7% 1.4rem;
+    font-size: 23px;
+    margin-bottom: 50px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+p {
+    font-weight: 100;
+}
+
+/* about section */
+/* Styling untuk bagian about-article */
+.about-article {
+    margin: 10rem 7% 1.4rem;
+    padding: 5rem 7% 4rem;
+    background-color: #393E46;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+/* Styling untuk info penulis */
+.author-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.author-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 0;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.author-info p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Styling untuk judul dan isi artikel */
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #EEEEEE;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #FDF7F4;
+}
+
+/* responsive about di hp */
+
+@media (max-width: 768px) {
+    .about-article {
+        margin: 2rem 5% 1rem;
+        padding: 5rem 5% 2rem;
+    }
+
+    .author-info {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .author-photo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+/* contact */
+.contact {
+    margin: 10rem 7% 1.4rem;
+    padding: 5rem 7% 4rem;
+    background-color: #393E46;
+    border-radius: 8px;
+    margin-bottom: 100%;
+}
+
+.contact h3 {
+    font-size: 50px;
+}
+
+.contact p {
+    padding: 0%;
+    margin: 0%;
+    font-size: 25px;
+}
+
+button {
+    margin-right: 10px;
+    border: none;
+    font-size: 17px;
+    padding: 7px 12px;
+    background: #3E5879;
+    border-radius: 11px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #213555;
+    transition: 0.5s;
+}
+
+a {
+    color: #EEEEEE;
+} 
+
+/* responsive contact di hp */
+
+@media (max-width: 768px) {
+    .contact {
+        margin: 3rem 5% 1rem;
+        padding: 5rem 5% 2rem;
+    }
+
+    .contact h3 {
+        font-size: 30px;
+    }
+
+    .contact p {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 6px 10px;
+        margin-right: 5px;
+    }
+}
+
+.simple-footer {
+    background-color: #393E46; 
+    color: #EEEEEE; 
+    padding: 25px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.simple-footer p {
+    margin: 5px 0;
+}
+
+.simple-footer p:hover {
+    color: var(--primary); 
+    transition: 0.3s;
+}
+
+/* media queries */
+/* laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #EEEEEE;
+        width: 20rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: var(--bg);
+        display: block;
+        margin: 0 auto;
+        padding: 10px 0;
+        font-size: 150%;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a {
+        text-align: justify;
+        margin: 1rem;
+    }
+}
+/* mobile phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
